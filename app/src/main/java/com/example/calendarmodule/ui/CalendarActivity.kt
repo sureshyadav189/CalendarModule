@@ -1,9 +1,12 @@
 package com.example.calendarmodule.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.calendarmodule.R
@@ -16,6 +19,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.util.Random
+
 
 @AndroidEntryPoint
 class CalendarActivity : AppCompatActivity() {
@@ -46,6 +51,13 @@ class CalendarActivity : AppCompatActivity() {
             }
         }
 
+        updateTimeJob = CoroutineScope(Dispatchers.Main).launch {
+            while (true){
+                randomColor()
+                delay(1000*60*60)
+            }
+        }
+
 
     }
 
@@ -63,5 +75,17 @@ class CalendarActivity : AppCompatActivity() {
 
     private fun openPage(){
         startActivity(Intent(this,EndActivity::class.java))
+    }
+
+    private fun randomColor(){
+        val rand = Random()
+        val r: Int = rand.nextInt(255)
+        val g: Int = rand.nextInt(255)
+        val b: Int = rand.nextInt(255)
+        val randomColor = Color.rgb(r, g, b)
+        val color: IntArray? = null
+        val col = intArrayOf(Color.rgb(r, g, b))
+        var backgroundGradient = binding.consMain.background as GradientDrawable
+        backgroundGradient.setColor(Color.rgb(r,g,b))
     }
 }
