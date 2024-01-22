@@ -1,0 +1,33 @@
+<!-- res/layout/item_week_day.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/weekDayTextView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="8dp"
+        android:text="M"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:background="@drawable/ic_circle"
+        app:layout_constraintBottom_toTopOf="@+id/bulletImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bulletImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_dot"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/weekDayTextView"
+        app:layout_constraintLeft_toLeftOf="@+id/weekDayTextView"
+        app:layout_constraintRight_toRightOf="@+id/weekDayTextView"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

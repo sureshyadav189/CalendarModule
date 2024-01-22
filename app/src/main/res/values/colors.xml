@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pastBCColor">#29C530</color>
+    <color name="futureBCColor">#F3F4F4</color>
+    <color name="currentColor">#F3F4F4</color>
+    <color name="card_bc">#FAF6F6</color>
+    <color name="trns_bc">#43A047</color>
+    <color name="sky_blue">#7544DA</color>
+</resources>
