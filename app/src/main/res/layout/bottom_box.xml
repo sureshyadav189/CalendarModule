@@ -5,16 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cons_lay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/main_card"
             android:layout_width="match_parent"
@@ -109,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/ic_box"
         android:text="@string/enter"
